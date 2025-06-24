@@ -1,0 +1,22 @@
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int[] arr1 = new int[m];
+        for(int i=0;i<m;i++){
+            arr1[i] = sc.nextInt();
+        }
+        for(int i=0;i<m;i++){
+            for(int j=i+1;j<m;j++){
+                if(arr1[i] == arr1[j]){
+                    System.out.print("Output:"+arr1[i]+" ");
+                    break;
+                }
+            }
+        }
+    }
+}
+        
+        
+        
