@@ -7,14 +7,22 @@ class Main{
         for(int i=0;i<m;i++){
             arr1[i] = sc.nextInt();
         }
-        int[] arr2 = new int[m];
+        int n = arr1[1];
+        int max=0;
+        int min=0;
         for(int i=0;i<m;i++){
-            arr2[i] = sc.nextInt();
+            if(n<arr1[i]){
+                n = arr1[i];
+                max = arr1[i];
+                //System.out.println("Output:"+max);
+            }
+            else if(n>arr1[i]){
+                n = arr1[i];
+                min = arr1[i];
+                //System.out.println("Output:"+min);
+            }
         }
-        int[] arr3 = new int[m];
-        for(int i=0;i<m;i++){
-            arr3[i] = arr1[i] + arr2[i];
-        }
-        System.out.println("Output:"+Arrays.toString(arr3));
+        System.out.println("Output:"+max);
+        System.out.println("Output:"+min);
     }
 }
